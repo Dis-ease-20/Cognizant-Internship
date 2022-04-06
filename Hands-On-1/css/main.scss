@@ -1,0 +1,285 @@
+// Colors
+
+// Primary Grey:
+$grey: #333333;
+
+// Primary Hue
+$hue: #dbf3fa;
+
+// Primary Tint
+$tint: #131a22;
+
+// GENERAL STYLING
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 5.8em;
+}
+
+h2 {
+  font-size: 4.8em;
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 3.6em;
+  margin-bottom: 1.2rem;
+}
+
+strong {
+  font-weight: 400;
+  font-size: 1.6em;
+}
+
+// RESUABLE CLASSES
+.flex {
+  display: flex;
+}
+
+.flexh {
+  flex-direction: row;
+}
+
+.flexv {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  max-width: 100em;
+  margin: 0 auto;
+}
+
+.mbsm {
+  margin-bottom: 3.2rem;
+}
+
+.center-cont {
+  width: 90%;
+  margin: 0 auto;
+}
+
+// HEADER
+header {
+  background-color: $grey;
+  color: #fff;
+}
+
+.header-cont {
+  padding: 1.6em 0;
+  align-items: center;
+  justify-content: space-around;
+
+  ul {
+    font-size: 1.6em;
+    font-weight: 300;
+
+    li {
+      display: inline-block;
+      margin-right: 1.6em;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// MAIN SECTION
+// ***************************
+
+// MENU SECTION
+.section-menu {
+  menu {
+    justify-content: space-between;
+    margin: 0 4.8em;
+    align-items: center;
+    li {
+      display: inline-block;
+      font-size: 1.6em;
+      padding: 1.6em 0;
+      margin-right: 1.2em;
+      font-weight: 700;
+      color: $grey;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+
+    .search-bar {
+      font-size: 0.8em;
+      color: rgb(131, 131, 131);
+      width: 25%;
+
+      input {
+        border: 0.1em solid black;
+        padding: 0.4em 0.8em;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// MENU END ***********************
+// **********************************
+
+// HERO SECTION
+.section-hero {
+  background-color: rgb(238, 239, 240);
+  justify-content: space-around;
+  align-items: center;
+  gap: 4.8em;
+  padding: 2.4em 4.8em;
+
+  .hero-img {
+    width: 20%;
+  }
+
+  .hero-text {
+    font-size: 1.8em;
+
+    li {
+      margin-bottom: 0.8em;
+      font-weight: 500;
+    }
+  }
+}
+
+// HERO END *******************
+// **********************************
+
+// DEAL SECTION
+.section-deals {
+  .s1-img-cont {
+    gap: 1.6rem;
+  }
+  .img-card {
+    display: inline-block;
+
+    img {
+      height: 15em;
+      margin-bottom: 1.2em;
+    }
+
+    p {
+      width: 13rem;
+      text-align: center;
+      font-size: 1.6em;
+    }
+  }
+}
+
+// DEAL END *********************
+// ************************************
+
+// FASHION SECTION
+
+.section-fashion {
+  .s1-img-cont {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1.6rem;
+    row-gap: 2.4rem;
+
+    .img-card {
+      display: inline-block;
+      background-color: $hue;
+      width: fit-content;
+
+      img {
+        height: 20em;
+        margin-bottom: 0.5em;
+        padding: 0.6em;
+      }
+
+      p {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+// FASHION ENDS **********************
+// *****************************************
+
+// TAG SECTION
+
+.section-tags {
+  .tag-cont {
+    display: inline-block;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1.2rem;
+    border-right: 1px solid black;
+    font-size: 1.4rem;
+  }
+}
+
+// TAGS END *******************************
+// ***************************************************
+
+// FOOTER SECTION
+.footer-cont {
+  background-color: $tint;
+  font-size: 1.6rem;
+  color: #fff;
+  width: 100rem;
+  margin: 0 auto;
+  padding: 2.4rem 4.8rem;
+
+  .tertiary-heading {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+
+  .grid {
+    grid-template-columns: 2fr 5fr 2fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3.2rem;
+    align-items: flex-start;
+
+    .footer-sections {
+      line-height: 3.6rem;
+    }
+
+    .section-my-acc {
+      grid-row: 1/3;
+    }
+
+    .section-policies {
+      grid-row: 1/4;
+    }
+
+    .section-about {
+      grid-column: 3/4;
+      margin-top: -2.4rem;
+    }
+  }
+}
